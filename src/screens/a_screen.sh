@@ -1,6 +1,6 @@
 #!/bin/bash
 # A screen
-original_main_prompt="$(print_fill "+")\n$(print_center "Welcome message" ".")\n$(print_options "a] Does something" "b] Does something else" "x|q] exits")" 
+original_main_prompt="$(print_fill "+")\n$(print_center "Welcome message" ".")\n$(print_options "a] Does something" "b] Does something else" "p] Runs a process" "x|q] exits")" 
 main_prompt=$original_main_prompt
 
 main_screen() {
