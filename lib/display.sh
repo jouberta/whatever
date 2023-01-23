@@ -4,7 +4,7 @@
 # Prints first argument in center of console
 print_center() {
 	msg_length=${#1}
-	fill_length=$(($COLUMNS - $msg_length - padding ))
+	fill_length=$(($columns - $msg_length - padding ))
 	left_fill=$(($fill_length / 2))
 	right_fill=$(($fill_length - $left_fill - padding ))
 	for i in $(seq 1 1 $left_fill); do printf "$2";  done
@@ -16,7 +16,7 @@ print_center() {
 
 print_padded() {
 	msg_length=${#1}
-	fill_length=$(($COLUMNS - $msg_length - padding - padding - padding ))
+	fill_length=$(($columns - $msg_length - padding - padding - padding ))
 	for i in $(seq 1 1 $padding); do printf "$2";  done
 	for i in $(seq 1 1 $padding); do printf " ";  done
 	printf "$1"
@@ -26,7 +26,7 @@ print_padded() {
 
 print_padded_centered() {
 	msg_length=${#1}
-	fill_length=$(($COLUMNS - $msg_length - padding ))
+	fill_length=$(($columns - $msg_length - padding ))
 	left_fill=$(($fill_length / 2))
 	right_fill=$(($fill_length - $left_fill - padding ))
 	for i in $(seq 1 1 $padding); do printf "$2";  done
@@ -38,7 +38,7 @@ print_padded_centered() {
 
 print_fill() {
 	fill=""
-	for i in $(seq 1 1 $COLUMNS); do fill+="$1";done
+	for i in $(seq 1 1 $columns); do fill+="$1";done
 	printf $fill
 }
 
